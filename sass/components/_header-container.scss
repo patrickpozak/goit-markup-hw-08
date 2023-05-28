@@ -1,0 +1,97 @@
+@use "../utils/variables" as *;
+@use "../utils/base" as *;
+
+.header-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 46px;
+  &__m-item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: var(--text-color-1);
+    text-decoration: none;
+    &:hover {
+      color: var(--text-color-4);
+      transition-property: color;
+      transition: $animation;
+    }
+    &:focus {
+      color: var(--text-color-4);
+      outline: none;
+      transition-property: color;
+      transition: $animation;
+    }
+  }
+}
+
+.active-site-underline {
+  position: relative;
+  .menu-list__m-item {
+    color: var(--text-color-4);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 47px;
+    width: 100%;
+    border-bottom: 4px solid var(--quaternary-color);
+    border-radius: 2px;
+    display: flex;
+  }
+}
+
+.header-contact {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 2;
+  gap: 50px;
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: var(--text-color-2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    &:hover,
+    &:focus {
+      color: var(--text-color-4);
+      text-decoration: none;
+      cursor: pointer;
+      outline: none;
+      transition-property: color;
+      transition: $animation;
+      svg {
+        color: var(--text-color-4);
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        fill: var(--quaternary-color);
+        transition: $animation;
+      }
+    }
+  }
+  &__envelope-icon {
+    fill: var(--text-color-2);
+    margin-right: 10px;
+  }
+  &__smartphone-icon {
+    fill: var(--text-color-2);
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../utils/variables" as *;
+@use "../utils/base" as *;
+
+.photo-content {
+  > img {
+    object-fit: cover;
+  }
+  display: flex;
+  gap: 30px;
+  &__item {
+    margin: 0;
+    position: relative;
+    &--overlay-container {
+      background-color: rgba(47, 48, 58, 0.8);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  &__item-title {
+    color: var(--text-color-3);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 27px 90px;
+  }
+}

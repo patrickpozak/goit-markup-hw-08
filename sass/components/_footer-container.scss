@@ -1,0 +1,142 @@
+@use "../utils/variables" as *;
+@use "../utils/base" as *;
+
+.footer-content {
+  display: flex;
+  gap: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__flexibility {
+    display: flex;
+    flex-direction: column;
+    &--grow {
+      flex-grow: 2;
+    }
+  }
+}
+
+.footer-contact {
+  font-style: normal;
+  color: var(--text-color-3);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  &__address {
+    color: var(--text-color-6);
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: var(--text-color-4);
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  &__link {
+    color: var(--text-color-6);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.714;
+    &:hover {
+      color: var(--text-color-4);
+    }
+    &:focus {
+      color: var(--text-color-4);
+      outline: none;
+    }
+  }
+  &__link-portfolio {
+    color: var(--text-color-6);
+    font-size: 14px;
+    line-height: 1.714;
+    &:hover {
+      color: var(--text-color-4);
+      text-decoration: none;
+    }
+    &:focus {
+      color: var(--text-color-4);
+      outline: none;
+    }
+  }
+}
+
+.social-icons-list {
+  list-style-type: none;
+  max-width: 206px;
+  display: flex;
+  gap: 10px;
+  &__item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    &:hover,
+    &:focus {
+      background-color: var(--quaternary-color);
+      cursor: pointer;
+    }
+  }
+  &__icon {
+    fill: var(--primary-color);
+    padding: 12px;
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  &__label-box {
+    flex-grow: 2;
+  }
+  &__email-box {
+    position: relative;
+    width: 100%;
+
+    background-color: rgba(33, 150, 243, 0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    padding: 15px 16px;
+    color: var(--text-color-3);
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+    }
+    &:focus {
+      outline: none;
+      transition: $animation;
+    }
+  }
+  &__button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    background-color: var(--quaternary-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 28px 10px 42px;
+    display: flex;
+    align-items: center;
+    border: none;
+    color: var(--text-color-3);
+    flex-grow: 0;
+    &:hover {
+      cursor: pointer;
+      transition: $animation;
+    }
+  }
+  &__icon {
+    margin-left: 24px;
+
+    display: flex;
+    align-items: center;
+    fill: var(--primary-color);
+  }
+}

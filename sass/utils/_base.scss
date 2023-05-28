@@ -1,0 +1,42 @@
+@use "./variables" as *;
+
+body {
+  background-color: var(--primary-color);
+  font-family: $fontMain;
+  color: var(--text-color-1);
+}
+img {
+  display: block;
+}
+svg {
+  display: block;
+}
+input {
+  border: none;
+  outline: none;
+}
+input:hover {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

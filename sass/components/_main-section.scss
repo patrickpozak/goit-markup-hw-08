@@ -1,0 +1,28 @@
+@use "../utils/variables" as *;
+@use "../utils/base" as *;
+
+.main-section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  gap: 30px;
+
+  &__order-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    letter-spacing: 0.06em;
+    background: var(--quaternary-color);
+    color: var(--text-color-3);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    max-width: 200px;
+    padding: 10px 41px;
+  }
+}

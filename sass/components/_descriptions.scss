@@ -1,0 +1,27 @@
+@use "../utils/variables" as *;
+@use "../utils/base" as *;
+
+.middle-section-content {
+  display: flex;
+  align-items: center;
+  padding-bottom: 94px;
+}
+
+.descriptions {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  &__icon {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    fill: var(--text-color-1);
+    background-color: var(--secondary-color);
+  }
+  &__text-container {
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+    color: var(--text-color-2);
+  }
+}

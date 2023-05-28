@@ -1,0 +1,27 @@
+@use "../utils/variables" as *;
+@use "../utils/base" as *;
+
+.top-container {
+  background: var(--primary-color);
+  border-bottom: 1px solid var(--line-color);
+}
+.main-section-container {
+  background-color: var(--tertiary-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/people-office.jpg");
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.middle-section-container {
+  background: var(--primary-color);
+}
+.third-section-container {
+  background: var(--secondary-color);
+}
+.fourth-section-container {
+  background: var(--primary-color);
+}
+.bottom-container {
+  background: var(--tertiary-color);
+}

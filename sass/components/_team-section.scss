@@ -1,0 +1,60 @@
+@use "../utils/variables" as *;
+@use "../utils/base" as *;
+
+.team-content {
+  display: flex;
+  gap: 30px;
+}
+.personality-box {
+  margin: 0;
+  background: var(--primary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  &__job-name {
+    font-size: 16px;
+    line-height: 1.187;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-top: 30px;
+  }
+  &__person-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.187;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-bottom: 10px;
+  }
+  &__social-icons-list {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    padding: 16px 32px 30px;
+  }
+  &__social-icon {
+    fill: var(--quintuple-color);
+    padding: 12px;
+  }
+  &__icon-links {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    &:hover,
+    &:focus {
+      background-color: var(--quaternary-color);
+      outline: none;
+      cursor: pointer;
+      transition-property: background-color;
+      transition: $animation;
+      svg {
+        fill: var(--primary-color);
+        transition-property: fill;
+        transition: $animation;
+      }
+    }
+  }
+}
