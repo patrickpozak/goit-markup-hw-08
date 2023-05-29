@@ -1,16 +1,28 @@
 @use "../utils/variables" as *;
 @use "../utils/base" as *;
+@use "../utils/mixins" as *;
 
 .middle-section-content {
   display: flex;
   align-items: center;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  @include tablet {
+    padding-bottom: 45px;
+  }
+
+  @include desktop {
+    padding-bottom: 94px;
+  }
 }
 
 .descriptions {
   list-style: none;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
   &__icon {
     padding: 25px 100px;
     margin-bottom: 30px;

@@ -1,14 +1,18 @@
 @use "../utils/variables" as *;
 @use "../utils/base" as *;
+@use "../utils/mixins" as *;
 
 .main-section-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0;
   gap: 30px;
+
+  @include desktop {
+    padding: 200px 0;
+  }
 
   &__order-button {
     font-weight: 700;

@@ -1,17 +1,40 @@
 @use "../utils/variables" as *;
 @use "../utils/base" as *;
+@use "../utils/mixins" as *;
 
 .top-container {
   background: var(--primary-color);
   border-bottom: 1px solid var(--line-color);
+  width: 100%;
+
+  @include phone {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 .main-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--tertiary-color);
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../images/people-office.jpg");
   background-repeat: no-repeat;
-  max-width: 1600px;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
+  @include desktop {
+    background-size: auto;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
 }
 .middle-section-container {
   background: var(--primary-color);

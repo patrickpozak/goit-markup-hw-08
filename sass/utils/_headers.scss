@@ -1,14 +1,21 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .header-primary {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-color-3);
-  max-width: 696px;
+  max-width: 365px;
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 .header-secondary {
   font-weight: 700;

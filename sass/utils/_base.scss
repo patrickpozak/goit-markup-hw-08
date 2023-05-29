@@ -1,4 +1,9 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: var(--primary-color);
@@ -7,6 +12,8 @@ body {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 svg {
   display: block;
@@ -31,12 +38,42 @@ ul {
   border: 0;
 }
 .container {
-  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  &--top {
+    background: var(--primary-color);
+  }
+
+  @include phone {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &--is-hide {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+}
+
+header {
+  border-bottom: 1px solid var(--line-color);
 }

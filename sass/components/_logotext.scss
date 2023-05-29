@@ -1,5 +1,6 @@
 @use "../utils/variables" as *;
 @use "../utils/base" as *;
+@use "../utils/mixins" as *;
 
 .logotext {
   color: var(--text-color-4);
@@ -7,9 +8,14 @@
   font-family: "Raleway";
 
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.192;
+  }
+
   &:hover {
     color: var(--text-color-4);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -40,8 +46,14 @@
     }
   }
   &--position-header {
-    margin-right: 93px;
     flex-grow: 0;
+    @include tablet {
+      margin-right: 83px;
+    }
+
+    @include desktop {
+      margin-right: 93px;
+    }
   }
   &--position-footer {
     padding-bottom: 20px;

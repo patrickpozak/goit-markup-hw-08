@@ -1,5 +1,7 @@
 @use "../utils/variables" as *;
 @use "../utils/base" as *;
+@use "../utils/mixins" as *;
+
 .backdrop {
   position: fixed;
   left: 0;
