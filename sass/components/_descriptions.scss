@@ -2,48 +2,53 @@
 @use "../utils/base" as *;
 @use "../utils/mixins" as *;
 
-.middle-section-content {
-  display: flex;
-  align-items: center;
-  padding-bottom: 60px;
-  @include tablet {
-    padding-bottom: 45px;
-  }
-
-  @include desktop {
-    padding-bottom: 94px;
-  }
-}
-
 .descriptions {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   flex-wrap: wrap;
 
   @include desktop {
     flex-wrap: nowrap;
+    padding-bottom: 94px;
   }
-  &__icon {
-    padding: 25px 190px;
-    margin-bottom: 30px;
-    fill: var(--text-color-1);
-    background-color: var(--secondary-color);
+  &__item {
+    width: 450px;
 
     @include tablet {
       width: 354px;
-      padding: 25px 142px;
     }
 
     @include desktop {
       width: 270px;
-      padding: 25px 100px;
+    }
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    margin-bottom: 30px;
+    fill: var(--text-color-1);
+    background-color: var(--secondary-color);
+    width: 100%;
+
+    @include tablet {
+      max-width: 354px;
+      padding: 25px 0;
+    }
+
+    @include desktop {
+      max-width: 270px;
+      padding: 25px 0;
     }
   }
   &__text-container {
     font-size: 14px;
     line-height: 1.71;
-    text-align: justify;
+
     letter-spacing: 0.03em;
     color: var(--text-color-2);
   }

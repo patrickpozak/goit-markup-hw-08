@@ -33,6 +33,12 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   padding-bottom: 10px;
+  &--align {
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
+  }
 }
 
 .header-quaternary {
