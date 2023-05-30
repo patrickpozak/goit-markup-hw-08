@@ -20,19 +20,30 @@
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+
   @include desktop {
     flex-wrap: nowrap;
   }
   &__icon {
-    padding: 25px 100px;
+    padding: 25px 190px;
     margin-bottom: 30px;
     fill: var(--text-color-1);
     background-color: var(--secondary-color);
+
+    @include tablet {
+      width: 354px;
+      padding: 25px 142px;
+    }
+
+    @include desktop {
+      width: 270px;
+      padding: 25px 100px;
+    }
   }
   &__text-container {
     font-size: 14px;
     line-height: 1.71;
-
+    text-align: justify;
     letter-spacing: 0.03em;
     color: var(--text-color-2);
   }
