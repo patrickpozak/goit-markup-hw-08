@@ -3,13 +3,22 @@
 @use "../utils/mixins" as *;
 
 .customer-list {
-  list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
   &__link {
+    width: 210px;
+    height: 92px;
+    padding: 16px 52px;
     display: flex;
     align-items: center;
+    justify-content: center;
     border: 1px solid #afb1b8;
     border-radius: 4px;
     &:hover,
@@ -26,9 +35,18 @@
         transition: $animation;
       }
     }
+    @include tablet {
+      width: 226px;
+      padding: 16px 60px;
+    }
+
+    @include desktop {
+      width: 168px;
+      padding: 16px 32px;
+    }
   }
+
   &__icon {
-    padding: 16px 32px;
     fill: var(--quintuple-color);
   }
 }
