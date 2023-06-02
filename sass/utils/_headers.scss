@@ -19,11 +19,16 @@
 }
 .header-secondary {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.166;
+  font-size: 28px;
+  line-height: 1.178;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.166;
+    padding-bottom: 50px;
+  }
 }
 
 .header-tertiary {
@@ -49,5 +54,11 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   padding-bottom: 20px;
-  margin-top: 12px;
+
+  &--align {
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
+  }
 }
