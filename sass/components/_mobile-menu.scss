@@ -29,13 +29,11 @@
   height: 100vh;
   background-color: var(--primary-color);
   transform: translateY(-100%);
-  transition-property: transform;
+
   transition: $animation;
 
-  & .is-open {
+  &.is-open {
     transform: translateY(0);
-    transition-property: transform;
-    transition: $animation;
   }
 
   & .menu-toggle {
