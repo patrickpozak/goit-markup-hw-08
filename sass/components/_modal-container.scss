@@ -27,13 +27,18 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: var(--primary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 9999;
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
+
   &__close-button {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -61,11 +66,15 @@
   &__header-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     margin-top: 2px;
     padding: 0 40px 12px 40px;
+    @include desktop {
+      font-size: 20px;
+      line-height: 1.15;
+    }
   }
 }
 
@@ -161,16 +170,31 @@
   &__checkbox-text-label {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 14px;
-    line-height: 1.71;
+    justify-content: flex-start;
+    font-size: 12px;
+    line-height: 1.166;
     letter-spacing: 0.03em;
     color: var(--text-color-2);
     cursor: pointer;
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+      justify-content: center;
+    }
+  }
+  &__checkbox-text {
+    padding-left: 7px;
+    margin-right: 3px;
+    &--text-and {
+      padding-left: 0;
+    }
   }
   &__checkbox-link {
     color: var(--text-color-4);
+    margin-right: 3px;
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
